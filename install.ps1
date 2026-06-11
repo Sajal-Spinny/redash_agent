@@ -47,14 +47,14 @@ foreach ($cmd in @("python", "python3")) {
 if (-not $pythonExe) {
     Write-Warn "Python $MIN_PYTHON_VER+ not found. Installing via winget..."
     try {
-        winget install --id Python.Python.3.11 --silent --accept-source-agreements --accept-package-agreements
+        winget install --id Python.Python.3.9.13 --silent --accept-source-agreements --accept-package-agreements
         # Refresh PATH
         $env:PATH = [System.Environment]::GetEnvironmentVariable("PATH", "Machine") + ";" +
                     [System.Environment]::GetEnvironmentVariable("PATH", "User")
         $pythonExe = "python"
         Write-Ok "Python installed. You may need to reopen PowerShell if later steps fail."
     } catch {
-        Write-Fail "Could not install Python automatically.`nPlease install Python 3.11 from https://python.org and re-run this installer."
+        Write-Fail "Could not install Python automatically.`nPlease install Python 3.9.13 from https://python.org and re-run this installer."
     }
 }
 
