@@ -1,0 +1,7 @@
+output/
+*.csv
+__pycache__/
+*.pyc
+.env
+.claude/settings.local.json
+!output/.gitkeep
