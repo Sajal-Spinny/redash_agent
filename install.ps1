@@ -10,7 +10,7 @@ $GITEA_CLONE_URL = "https://sp-gitea.mngt.ispinnyworks.in/spinny/spinny-air.git"
 $INSTALL_DIR     = "$env:USERPROFILE\spinny-air"
 $DORIS_HOST      = "sp-query-engine.mngt.ispinnyworks.in"
 $DORIS_PORT      = "9030"
-$MIN_PYTHON_VER  = [version]"3.10"
+$MIN_PYTHON_VER  = [version]"3.9"
 # ------------------------------------------------------------------
 
 function Write-Step($msg)  { Write-Host "`n==> $msg" -ForegroundColor Cyan }
